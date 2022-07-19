@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{site/dashboardLayout.html}">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        html {
+            font-family: sans-serif;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* body {
+            background-color: #000;
+        } */
+
+        .stack__card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            width: 72.3vw;
+            position: sticky;
+            top: 0;
+            box-shadow: inset 0 0 20px 0 #222222;
+            background-color: #efefef;
+            font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        .stack__card.outlier {
+            position: relative;
+        }
+
+        .card-overlay {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .slide-columns {
+            align-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100% - 40px);
+            max-width: 960px;
+            flex-basis: 0;
+            flex-grow: 1;
+            background-color: #336699;
+        }
+
+        .slide-column {
+            align-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            box-sizing: border-box;
+            border-style: solid;
+            border-width: 10px;
+            border-color: transparent;
+        }
+
+        .flex-container {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: block;
+            position: relative;
+            max-width: 1100px;
+            width: calc(100% - 20px);
+            margin: 0 auto;
+            -ms-box-orient: horizontal;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .flex-item {
+            padding: 10px;
+            margin: 0 10px 20px 10px;
+            color: white;
+            text-align: left;
+            transition: all 0.05s;
+            display: flex;
+            line-height: 1.5em;
+            align-items: center;
+            justify-content: center;
+            flex: 3 1 200px;
+        }
+
+        /* Grow, Shrink, Basis*/
+        .flex1 {
+            flex: 3 1 200px;
+        }
+
+        .flex2 {
+            flex: 1 1 200px;
+        }
+
+        .flex3 {
+            flex: 1 1 200px;
+        }
+
+        .flex4 {
+            flex: 1 1 150px;
+        }
+
+        .flex1_v2 {
+            flex: 2 1 1;
+        }
+
+        .flex2_v2 {
+            flex: 1 1 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <section layout:fragment="content">
+        <div style="background-image:url(https://vnn-imgs-f.vgcloud.vn/2020/09/07/10/them-xac-nhan-tin-buon-cho-iphone-12.jpg);"
+            id="slide-one" class="stack__card">
+            <div class="card-overlay">
+                <ul class="flex-container">
+                    <li class="flex-item flex1">It can be said that iPhone 13 Pro Max is a product born to give users
+                        everything they want in a phone. First must say a camera iPhone 13 Pro Max takes excellent
+                        photos. Besides, iPhone 13 Pro Max 120 Hz screen for a smooth user experience and especially
+                        iPhone 13 Pro Max with extremely powerful configuration with Apple A15 Bionic chip.</li>
+                    <li class="flex-item flex2">The biggest upgrade to the iPhone 13 Pro Max screen is the new ProMotion
+                        technology. This 6.7-inch monitor can automatically adjust the refresh rate from 10 Hz to 120
+                        Hz, providing overall performance and smoother animations. For example, just a quick scroll on
+                        the screen of a newspaper website and when the author puts iPhone 13 Pro Max and iPhone 12 Pro
+                        Max side by side for comparison, he can easily read the text with faster response than on iPhone
+                        13 ProMax.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="background-image:url(https://ict-imgs.vgcloud.vn/2020/09/01/08/iphone-12-ra-mat-thang-10-cung-san-pham-duoc-mong-doi-tu-lau.jpg)"
+            id="slide-two" class="stack__card">
+            <div class="card-overlay"></div>
+        </div>
+
+        <div style="background-image:url(https://fptshop.com.vn/uploads/originals/2017/11/1//636451677405295522_iPhone-x.jpg)"
+            id="slide-three" class="stack__card outlier">
+            <div class="card-overlay">
+
+                <ul class="flex-container">
+                    <li class="flex-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo
+                        risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Nulla vitae elit libero, a pharetra augue.</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div style="background-image:url(https://vnn-imgs-f.vgcloud.vn/2020/09/07/10/them-xac-nhan-tin-buon-cho-iphone-12.jpg);"
+            id="slide-four" class="stack__card">
+            <div class="card-overlay"></div>
+        </div>
+
+        <div style="background-image:url(https://ict-imgs.vgcloud.vn/2020/09/01/08/iphone-12-ra-mat-thang-10-cung-san-pham-duoc-mong-doi-tu-lau.jpg);"
+            id="slide-five" class="stack__card">
+            <div class="card-overlay"></div>
+        </div>
+    </section>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+</body>
+
+</html>
